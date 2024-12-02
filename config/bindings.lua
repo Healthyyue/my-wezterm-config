@@ -148,7 +148,7 @@ local keys = {
       }),
    },
    {
-      key = 'b',
+      key = 'm',
       mods = mod.SUPER,
       action = wezterm.action_callback(function(window, _pane)
          backdrops:toggle_focus(window)
@@ -159,13 +159,13 @@ local keys = {
    -- panes: split panes
    {
       key = [[\]],
-      mods = mod.SUPER,
-      action = act.SplitVertical({ domain = 'CurrentPaneDomain' }),
-   },
-   {
-      key = [[\]],
       mods = mod.SUPER_REV,
       action = act.SplitHorizontal({ domain = 'CurrentPaneDomain' }),
+   },
+   {
+      key = '-',
+      mods = mod.SUPER_REV,
+      action = act.SplitVertical({ domain = 'CurrentPaneDomain' }),
    },
 
    -- panes: zoom+close pane
@@ -173,10 +173,14 @@ local keys = {
    { key = 'w',     mods = mod.SUPER,     action = act.CloseCurrentPane({ confirm = false }) },
 
    -- panes: navigation
-   { key = 'k',     mods = mod.SUPER_REV, action = act.ActivatePaneDirection('Up') },
-   { key = 'j',     mods = mod.SUPER_REV, action = act.ActivatePaneDirection('Down') },
-   { key = 'h',     mods = mod.SUPER_REV, action = act.ActivatePaneDirection('Left') },
-   { key = 'l',     mods = mod.SUPER_REV, action = act.ActivatePaneDirection('Right') },
+   { key = 'k',     mods = mod.SUPER, action = act.ActivatePaneDirection('Up') },
+   { key = 'j',     mods = mod.SUPER, action = act.ActivatePaneDirection('Down') },
+   { key = 'h',     mods = mod.SUPER, action = act.ActivatePaneDirection('Left') },
+   { key = 'l',     mods = mod.SUPER, action = act.ActivatePaneDirection('Right') },
+   -- { key = 'UpArrow',     mods = LEADER, action = act.ActivatePaneDirection('Up') },
+   -- { key = 'DownArrow',     mods = LEADER, action = act.ActivatePaneDirection('Down') },
+   -- { key = 'LeftArrow',     mods = LEADER, action = act.ActivatePaneDirection('Left') },
+   -- { key = 'RightArrow',     mods = LEADER, action = act.ActivatePaneDirection('Right') },
    {
       key = 'p',
       mods = mod.SUPER_REV,
@@ -243,7 +247,8 @@ local mouse_bindings = {
 return {
    disable_default_key_bindings = true,
    -- disable_default_mouse_bindings = true,
-   leader = { key = 'Space', mods = mod.SUPER_REV },
+   -- leader = { key = 'Space', mods = mod.SUPER_REV },
+   leader = { key = 'B', mods = 'CTRL' },
    keys = keys,
    key_tables = key_tables,
    mouse_bindings = mouse_bindings,
