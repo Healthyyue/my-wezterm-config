@@ -189,7 +189,7 @@
     Linux
     ```sh
     # 创建字体目录（如果不存在）
-    mkdir -p \/usr/share/fonts/truetype/jetBrain
+    sudo mkdir -p /usr/share/fonts/truetype/jetBrain
 
     # 下载并解压字体（自动选择最新版本）
     cd \/usr/share/fonts/truetype/jetBrain
