@@ -208,6 +208,8 @@
     ```
     Install zsh and ohmyzsh
     https://www.haoyep.com/posts/zsh-config-oh-my-zsh/
+    # zsh theme and font install
+    https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#meslo-nerd-font-patched-for-powerlevel10k
     ```sh
     # 更新软件源
     sudo apt update && sudo apt upgrade -y
