@@ -206,7 +206,27 @@
     fc-list | grep "JetBrains Mono Nerd Font"
 
     ```
+    Install zsh and ohmyzsh
+    https://www.haoyep.com/posts/zsh-config-oh-my-zsh/
+    ```sh
+    # 更新软件源
+    sudo apt update && sudo apt upgrade -y
+    # 安装 zsh git curl
+    sudo apt install zsh git curl -y
+    #设置默认终端为 zsh（注意：不要使用 sudo）。
+    chsh -s /bin/zsh
+    #install ohmyzsh
+    sh -c "$(curl -fsSL https://install.ohmyz.sh/)"
+    #如果之前在使用bash时自定义了一些环境变量、别名等，那么在切换到zsh后，你需要手动迁移这些自定义配置。
+    #for example: cmake,conda
+    # 查看bash配置文件，并手动复制自定义配置
+    cat ~/.bashrc
+    # 编辑zsh配置文件，并粘贴自定义配置
+    nano ~/.zshrc
+    # 启动新的zsh配置
+    source ~/.zshrc
 
+    ```
     > More Info:
     >
     > - <https://www.nerdfonts.com/#home>
