@@ -186,6 +186,27 @@
     scoop install JetBrainsMono-NF
     ```
 
+    Linux
+    ```sh
+    # 创建字体目录（如果不存在）
+    mkdir -p \/usr/share/fonts/truetype/jetBrain
+
+    # 下载并解压字体（自动选择最新版本）
+    cd \/usr/share/fonts/truetype/jetBrain
+    sudo wget -O JetBrainsMono_NF.zip "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip"
+    sudo unzip JetBrainsMono_NF.zip -d ./
+
+    # 清理压缩包（可选）
+    rm JetBrainsMono_NF.zip
+
+    # flash font mem
+    fc-cache -f -v
+
+    # verify the font install
+    fc-list | grep "JetBrains Mono Nerd Font"
+
+    ```
+
     > More Info:
     >
     > - <https://www.nerdfonts.com/#home>
@@ -198,7 +219,7 @@
 
   1.  ```sh
       # On Windows and Unix systems
-      git clone https://github.com/KevinSilvester/wezterm-config.git ~/.config/wezterm
+      git clone https://github.com/Healthyyue/my-wezterm-config.git ~/.config/wezterm
       ```
   2.  And Done!!! 🎉🎉
 
